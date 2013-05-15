@@ -28,7 +28,17 @@ public class Misc {
 	    sb.append(n).append(' ');
 	}
 	sb.setCharAt(sb.length()-1, '\n');// (sb.length(), '\n');
-	System.out.println(sb.toString());
+	System.out.print(sb.toString());
+    }
+    
+    public static void printArray(int[] numbers, int offset, int len){
+        if(len<=0){ return;}
+        StringBuilder sb = new StringBuilder();
+        for(int i =offset;i < offset+len;i++){
+            sb.append(numbers[i]).append(' ');
+        }
+        sb.setCharAt(sb.length()-1, '\n');// (sb.length(), '\n');
+        System.out.print(sb.toString());
     }
 
     public static void main(String args[]) {
