@@ -2,7 +2,7 @@ package leetcode;
 
 public class LeetCode029 {
     public int divide(int dividend, int divisor) {
-        if(divisor == Integer.MIN_VALUE) { return dividend == Integer.MIN_VALUE ? -1 : 0; }
+        if(divisor == Integer.MIN_VALUE) { return dividend == Integer.MIN_VALUE ? 1 : 0; }
 	boolean isPositive = ( (dividend > 0) && ( divisor > 0) ) ||( (dividend < 0) && (divisor < 0) );
 	dividend = dividend < 0 ? dividend : -dividend;
 	divisor = divisor < 0 ? divisor : -divisor;
