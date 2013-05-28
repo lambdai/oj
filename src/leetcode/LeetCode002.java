@@ -58,33 +58,3 @@ public class LeetCode002 {
     }
 
 }
-
-
-class ListNode {
-      int val;
-     ListNode next;
-     ListNode(int x) {
-          val = x;
-          next = null;
-      }
-     public void print(){
-        if(next != null) {next.print();};
-        System.out.print(val);
-     }
-     public static ListNode genFromInt(int x){
-         ListNode preNode = null;
-         ListNode result = null;
-         while(x > 0){
-             ListNode n = new ListNode(x%10);
-             if(preNode != null){
-                 preNode.next = n;
-                 preNode = n;
-             } else {
-                 preNode = n;
-                 result = n;
-             }
-             x = x /10;
-         }
-         return result;
-     }
- }
