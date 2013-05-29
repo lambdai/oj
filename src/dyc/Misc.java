@@ -1,6 +1,7 @@
 package dyc;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class Misc {
     public static void quickSort(int[] numbers, int start, int end) {
@@ -21,7 +22,15 @@ public class Misc {
 	quickSort(numbers, start, less -2);
 	quickSort(numbers, less, end);
     }
-
+    public static void printByteArray(byte[] numbers){
+        StringBuilder sb = new StringBuilder();
+        for(int n: numbers){
+            sb.append(n).append(' ');
+        }
+        sb.setCharAt(sb.length()-1, '\n');// (sb.length(), '\n');
+        System.out.print(sb.toString());
+    }
+    
     public static void printArray(int[] numbers){
 	StringBuilder sb = new StringBuilder();
 	for(int n: numbers){
@@ -36,6 +45,18 @@ public class Misc {
         StringBuilder sb = new StringBuilder();
         for(int i =offset;i < offset+len;i++){
             sb.append(numbers[i]).append(' ');
+        }
+        sb.setCharAt(sb.length()-1, '\n');// (sb.length(), '\n');
+        System.out.print(sb.toString());
+    }
+    
+    
+    
+    public static <Item>void printList(List<Item> l){
+        if(l.size()==0) { System.out.println("List Empty");}
+        StringBuilder sb = new StringBuilder();
+        for(Item n: l){
+            sb.append(n).append(' ');
         }
         sb.setCharAt(sb.length()-1, '\n');// (sb.length(), '\n');
         System.out.print(sb.toString());

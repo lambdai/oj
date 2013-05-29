@@ -1,48 +1,66 @@
 package leetcode;
 
+import java.util.ArrayList;
+
+import dyc.Misc;
+
 public class LeetCode030 {
     public ArrayList<Integer> findSubstring(String S, String[] L) {
 
 	ArrayList<Integer> result = new ArrayList<Integer>(L.length);
 	if(L.length == 0) { return result;}
 	int partLen = L[0].length();
-	for(int i =0; i < L.length; i++) {
+	int i,j;
+	byte[] hashes = new byte[L.length];
+	byte[] sHashes = new byte[S.length()];
+	for(i =0; i < L.length; i++) {
+	    hashes[i] = 0;
 	    byte[] bytes = L[i].getBytes();
-	    for(int j=1, hashes[i] = bytes[0]; j<L[i].length(); j++){
+	    for(j=0; j<L[i].length(); j++){
 		hashes[i] ^= bytes[j];
 	    }
 	}
 
 	if(S.length() < partLen) { return result;}
-	bytes[] sBytes = new byte[S.length];
-	for(int i = 1, sHashes[0] = sBytes[0]; i<partLen; i++){
+	byte[] sBytes = S.getBytes();
+	for(i = 1, sHashes[0] = sBytes[0]; i<partLen; i++){
 	    sHashes[0] ^= sBytes[i];
 	}
 
-	for(int i = 1; i<=S.length()-partLen+1; i ++) {
-	    sHashes[i] = sHashes[i-1] ^ sBytes[i-1] ^ sBytes[i+partLen-1];
+	for(i = 1; i<=S.length()-partLen; i ++) {
+	    sHashes[i] = (byte) (sHashes[i-1] 
+	            ^ sBytes[i-1] 
+	                    ^ sBytes[i+partLen-1]);
 	}
-
-	int j = 0;
+	Misc.printByteArray(sHashes);
+	Misc.printByteArray(hashes);
+	j = 0;
 	nextPattern:
-	for(int i = 0; i < L.length; i++) {
+	for(i = 0; i < L.length; i++) {
 	    nextPos:
-	    while(j <= L.length-partLen){
+	    while(j <= S.length()-partLen){
 		if(sHashes[j] == hashes[i]) {
 		    for(int k = 0; k<partLen; k++){
-			if(L[i][k] != S[j]) {
+			if(L[i].charAt(k) != S.charAt(j+k)) {
 			    j++;
-			    
 			    continue nextPos;
 			}
 		    }
 		    result.add(j);
-		    i++; j++; break; // to nextPattern
+		    j+=partLen; break; // to nextPattern
 		}
 		j++;
 	    }
 	}
 	return result;
 
+    }
+    
+    public static void main(String args[]) {
+        LeetCode030 solution = new LeetCode030();
+        //Misc.printList(
+        //        solution.findSubstring("aaaaaaa", new String[]{"aaa","bbb","ccc"}));
+        Misc.printList(
+                solution.findSubstring("barfoothefoobarman", new String[]{"foo","bar"}));
     }
 }
