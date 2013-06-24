@@ -28,26 +28,29 @@ public class ListNode {
             System.out.println("null");
         }
     }
-    
-    public void print(){
-        if(next != null) {next.print();};
+
+    public void print() {
+        if (next != null) {
+            next.print();
+        };
         System.out.print(val);
-     }
-     public static ListNode genFromInt(int x){
-         ListNode preNode = null;
-         ListNode result = null;
-         while(x > 0){
-             ListNode n = new ListNode(x%10);
-             if(preNode != null){
-                 preNode.next = n;
-                 preNode = n;
-             } else {
-                 preNode = n;
-                 result = n;
-             }
-             x = x /10;
-         }
-         return result;
-     }
+    }
+
+    public static ListNode genFromInt(int x) {
+        ListNode preNode = null;
+        ListNode result = null;
+        while (x > 0) {
+            ListNode n = new ListNode(x % 10);
+            if (preNode != null) {
+                preNode.next = n;
+                preNode = n;
+            } else {
+                preNode = n;
+                result = n;
+            }
+            x = x / 10;
+        }
+        return result;
+    }
 
 }

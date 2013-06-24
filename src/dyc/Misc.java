@@ -40,6 +40,15 @@ public class Misc {
 	System.out.print(sb.toString());
     }
     
+    public static void printArray(Integer[] numbers){
+        StringBuilder sb = new StringBuilder();
+        for(int n: numbers){
+            sb.append(n).append(' ');
+        }
+        sb.setCharAt(sb.length()-1, '\n');// (sb.length(), '\n');
+        System.out.print(sb.toString());
+    }
+    
     public static void printArray(int[] numbers, int offset, int len){
         if(len<=0){ return;}
         StringBuilder sb = new StringBuilder();
