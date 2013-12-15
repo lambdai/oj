@@ -5,3 +5,6 @@ Lefts X rights combination should have l*r nodes. However, when I first wrote th
 * SimplifyPath
 Last element might not be /
 array out of bounds
+* BestTimeToBuyAndSellStock3
+1) combine left to right scan and  right to left scan
+2) verify the single order result
