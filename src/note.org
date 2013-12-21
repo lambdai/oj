@@ -1,6 +1,10 @@
 http://www.lewuxian.com/?author=23040&paged=4
+http://www.ituring.com.cn/article/47692
 * UniqSearchTree
 Lefts X rights combination should have l*r nodes. However, when I first wrote this solution, i generate only |lefts| nodes, make the next right node override the first one.
 * SimplifyPath
 Last element might not be /
 array out of bounds
+* BestTimeToBuyAndSellStock3
+1) combine left to right scan and  right to left scan
+2) verify the single order result
