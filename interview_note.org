@@ -1,0 +1,15 @@
+* graph
+** BFS,DFS
+*** articulate vertex by DFS
+** TODO flow
+** TODO match
+** matrix, ajacency, obj&pointer
+** TODO Dijkstra, A*
+** Topological sort 
+*** TODO DFS + stack
+*** non-in-degree node
+
+* tree
+AVL/RBT
+
+
