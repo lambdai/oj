@@ -8,3 +8,7 @@ array out of bounds
 * BestTimeToBuyAndSellStock3
 1) combine left to right scan and  right to left scan
 2) verify the single order result
+* ValidPalindrome
+1) take care of alphanumeric
+2) left-to-right as well as right-to-left at the same time, take care of the edge
+3) when right and left curser meet, take care of how they meet, especially the case that update left but not update right
