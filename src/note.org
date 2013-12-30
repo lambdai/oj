@@ -12,3 +12,7 @@ array out of bounds
 1) take care of alphanumeric
 2) left-to-right as well as right-to-left at the same time, take care of the edge
 3) when right and left curser meet, take care of how they meet, especially the case that update left but not update right
+
+* Inorder and Postorder tree
+1) border
+2) equal array size(in inorder and postorder, so no need to recalculate)
