@@ -31,3 +31,6 @@ Do not change the border variable when iteration. use another var.( we have len,
 * Candy
 1) duplicate can be deemed as inc/dec order
 2) variables must have understandable meaning
+
+* Polish Notation
+remember the stack and the order of opand1 and opand2
