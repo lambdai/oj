@@ -27,3 +27,7 @@ array out of bounds
 
 * Add Binary
 Do not change the border variable when iteration. use another var.( we have len, not let --len, use "i = len; for(...;; --i)"
+
+* Candy
+1) duplicate can be deemed as inc/dec order
+2) variables must have understandable meaning
