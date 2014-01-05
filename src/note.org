@@ -34,3 +34,7 @@ Do not change the border variable when iteration. use another var.( we have len,
 
 * Polish Notation
 remember the stack and the order of opand1 and opand2
+
+* Clone Graph
+1) BFS is recommended
+2) the lower level queue should add the ORIGINAL node rather than the COPY node!!
