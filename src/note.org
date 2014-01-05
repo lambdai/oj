@@ -38,3 +38,6 @@ remember the stack and the order of opand1 and opand2
 * Clone Graph
 1) BFS is recommended
 2) the lower level queue should add the ORIGINAL node rather than the COPY node!!
+
+* Path Sum
+1) to judge if i am a leaf, you can only determine it by yourself other than the return value from sons.
