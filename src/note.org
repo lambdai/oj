@@ -41,3 +41,6 @@ remember the stack and the order of opand1 and opand2
 
 * Path Sum
 1) to judge if i am a leaf, you can only determine it by yourself other than the return value from sons.
+
+* Pascal Trangle
+When use static array to do iteration calculation, remember the element could be modified next round! So, pre save it, or use two array! Also important in DP
