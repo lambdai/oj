@@ -31,12 +31,12 @@ public class PathSum2 {
 		pathSum(node.right, sumLeft, result, upperPath);
 		upperPath.pop();
 	}
-	
+
 	public static void main(String args[]) {
 		Stack<Integer> stack = new Stack<Integer>();
 		stack.push(1);
 		stack.push(2);
-		for(int i: stack) {
+		for (int i : stack) {
 			System.out.println(i);
 		}
 	}
