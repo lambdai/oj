@@ -44,3 +44,8 @@ remember the stack and the order of opand1 and opand2
 
 * Pascal Trangle
 When use static array to do iteration calculation, remember the element could be modified next round! So, pre save it, or use two array! Also important in DP
+
+* SortList2Tree
+1) bottom to up
+2) calculate the length
+3) keep moving the current head ahead for current call execution
