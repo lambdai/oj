@@ -4,6 +4,7 @@ package dyc;
 public class RBTree<T extends Object > {
 	RBNode<T> root;
 	static RBNode<Object> NIL = new RBNode<Object>(0, null);
+	@SuppressWarnings("unchecked")
 	public RBTree() {
 		root = (RBNode<T>) NIL;
 	}
@@ -247,6 +248,7 @@ class RBNode<T extends Object> {
 		}
 		return left.findSmallest();
 	}
+	@SuppressWarnings("unchecked")
 	public RBNode(int k, T val) {
 		this.key = k;
 		this.val = val;
@@ -255,6 +257,7 @@ class RBNode<T extends Object> {
 		
 	}
 	
+	@SuppressWarnings("unchecked")
 	public RBNode(int k, T val, RBColor c) {
 		this.key = k;
 		this.val = val;
