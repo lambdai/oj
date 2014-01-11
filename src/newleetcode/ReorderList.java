@@ -1,19 +1,19 @@
+//http://oj.leetcode.com/problems/reorder-list/
 package newleetcode;
 
 import dyc.ListNode;
 
 public class ReorderList {
-
 	public void reorderList(ListNode head) {
 		if (head == null || head.next == null) {
 			return;
 		}
 		ListNode pMid = findMid(head);
-		//pMid.dump();
+		// pMid.dump();
 		ListNode pTail = reverse(pMid);
-		//pTail.dumpList();
+		// pTail.dumpList();
 		merge(head, pTail);
-		//head.dumpList();
+		// head.dumpList();
 		return;
 	}
 
@@ -42,8 +42,8 @@ public class ReorderList {
 	}
 
 	ListNode reverse(ListNode preMid) {
-		//preMid.next = null;
-		
+		// preMid.next = null;
+
 		ListNode current = preMid.next;
 		preMid.next = null;
 		ListNode next = current.next;
@@ -65,23 +65,25 @@ public class ReorderList {
 		n1.next = n2;
 		n1 = next1;
 		while (n1 != null) {
-			
+
 			next1 = n2.next;
 			n2.next = n1;
 			n2 = next1;
-			
+
 			next1 = n1.next;
 			n1.next = n2;
 			n1 = next1;
 		}
 	}
-	
+
 	public static void main(String args[]) {
 		ListNode n1 = new ListNode(1);
 		ListNode n2 = new ListNode(2);
 		ListNode n3 = new ListNode(3);
 		ListNode n4 = new ListNode(4);
-		n1.next = n2; n2.next = n3; n3.next = n4;
+		n1.next = n2;
+		n2.next = n3;
+		n3.next = n4;
 		new ReorderList().reorderList(n1);
 		n1.dumpList();
 		return;
