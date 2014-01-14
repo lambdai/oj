@@ -49,3 +49,8 @@ When use static array to do iteration calculation, remember the element could be
 1) bottom to up
 2) calculate the length
 3) keep moving the current head ahead for current call execution
+
+
+* Validate Binary Search Tree
+The left son should be in a range of (min, node.val) and right son in (node.val, max) where min, max inherent from current node
+the range is NOT oneside like (-infinity, node.val)!!!! 
