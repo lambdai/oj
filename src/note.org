@@ -54,3 +54,15 @@ When use static array to do iteration calculation, remember the element could be
 * Validate Binary Search Tree
 The left son should be in a range of (min, node.val) and right son in (node.val, max) where min, max inherent from current node
 the range is NOT oneside like (-infinity, node.val)!!!! 
+
+* Random Remove a key from hashmap
+Use an ancillary array containing all the keys.
+getRandom() pick a key in array and remove the last in array and set to the pos of picked key
+
+* Search in Rotated Sort Array
+consider two edges:
+1) imid == ileft, just search right, dual or single is ok
+2) edge >= or <= target, then search including this point
+
+* Remove element
+like qsort, use if A[i] == sentinel to just the final state
