@@ -23,18 +23,6 @@ public class RecoverBinarySearchTree {
 		n0.val = temp;
 	}
 
-	private void findParent(TreeNode parent, TreeNode current, TreeNode toFind) {
-		if (current == toFind) {
-			this.parent[0] = parent;
-			return;
-		}
-		if (toFind.val > current.val) {
-			findParent(current, current.right, toFind);
-		} else {
-			findParent(current, current.left, toFind);
-		}
-	}
-
 	private TreeNode searchTree(TreeNode pre, TreeNode node,
 			TreeNode[] suspicious) {
 		if (index > 1) {
