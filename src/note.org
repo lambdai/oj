@@ -66,3 +66,6 @@ consider two edges:
 
 * Remove element
 like qsort, use if A[i] == sentinel to just the final state
+
+* MinimumWindowSubstring
+When using different key, remember the variable name !!!
